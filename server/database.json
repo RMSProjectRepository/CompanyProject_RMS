@@ -1,0 +1,20 @@
+{
+  "Roles": [
+    {
+      "id": "d364",
+      "rolecode": "76554",
+      "rolename": "code n",
+      "privileges": [
+        "viewAccess"
+      ]
+    },
+    {
+      "id": "144a",
+      "rolecode": "777gt",
+      "rolename": "bhght",
+      "privileges": [
+        "createAccess"
+      ]
+    }
+  ]
+}
