@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { SetUserAction } from '../../actions/UserAction';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
-const ROLE_URL = '/Roles'; 
-dfghgghg
+const ROLE_URL = '/Roles';
 
 function Createrolespage() {
     const dispatch = useDispatch();
@@ -24,6 +23,8 @@ function Createrolespage() {
         rolecode: '',
         rolename: '',
     });
+
+    const [submitSuccess, setSubmitSuccess] = useState(false);
 
     const navigate = useNavigate();
 
@@ -55,6 +56,7 @@ function Createrolespage() {
         axios.post(`${BASE_URL}${ROLE_URL}`, values)
             .then(res => {
                 console.log(res);
+                setSubmitSuccess(true); // Set submit success to true
                 navigate('/', { state: { roleName: values.rolename } });
             })
             .catch(err => {
@@ -134,6 +136,7 @@ function Createrolespage() {
                             </div>
                             <button type="submit" className='btn btn-success' style={{ fontSize: '1.2em', marginLeft: '10px', marginTop: '20px', marginBottom: '33px', borderRadius: '9px', width: '80px', height: '38px', padding: '3px' }}>Submit</button>
                         </form>
+                        {submitSuccess && <div className="alert alert-success" role="alert" style={{ marginTop: '20px' }}>Successfully submitted!</div>}
                     </div>
                 </div>
             </div>

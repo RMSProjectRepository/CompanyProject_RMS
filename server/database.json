@@ -15,6 +15,23 @@
       "privileges": [
         "createAccess"
       ]
+    },
+    {
+      "id": "dc2d",
+      "rolecode": "88888",
+      "rolename": "kkkkkk",
+      "privileges": [
+        "updateAccess",
+        "viewAccess"
+      ]
+    },
+    {
+      "id": "4afd",
+      "rolecode": "9999",
+      "rolename": "jjjj",
+      "privileges": [
+        "updateAccess"
+      ]
     }
   ]
 }
